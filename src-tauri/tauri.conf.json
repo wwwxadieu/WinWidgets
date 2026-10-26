@@ -1,0 +1,171 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "WinWidgets",
+  "version": "0.2.0",
+  "identifier": "com.wwwxadieu.winwidgets",
+  "build": {
+    "beforeDevCommand": "npm run dev",
+    "devUrl": "http://localhost:1420",
+    "beforeBuildCommand": "npm run build",
+    "frontendDist": "../dist"
+  },
+  "app": {
+    "withGlobalTauri": false,
+    "windows": [
+      {
+        "label": "clock",
+        "title": "Đồng hồ",
+        "url": "index.html",
+        "width": 276,
+        "height": 126,
+        "decorations": false,
+        "transparent": true,
+        "shadow": false,
+        "resizable": false,
+        "skipTaskbar": true,
+        "alwaysOnBottom": true,
+        "visible": false,
+        "focus": false
+      },
+      {
+        "label": "network",
+        "title": "Tốc độ mạng",
+        "url": "index.html",
+        "width": 276,
+        "height": 176,
+        "decorations": false,
+        "transparent": true,
+        "shadow": false,
+        "resizable": false,
+        "skipTaskbar": true,
+        "alwaysOnBottom": true,
+        "visible": false,
+        "focus": false
+      },
+      {
+        "label": "weather",
+        "title": "Thời tiết",
+        "url": "index.html",
+        "width": 296,
+        "height": 256,
+        "decorations": false,
+        "transparent": true,
+        "shadow": false,
+        "resizable": false,
+        "skipTaskbar": true,
+        "alwaysOnBottom": true,
+        "visible": false,
+        "focus": false
+      },
+      {
+        "label": "calendar",
+        "title": "Lịch",
+        "url": "index.html",
+        "width": 316,
+        "height": 416,
+        "decorations": false,
+        "transparent": true,
+        "shadow": false,
+        "resizable": false,
+        "skipTaskbar": true,
+        "alwaysOnBottom": true,
+        "visible": false,
+        "focus": false
+      },
+      {
+        "label": "claude",
+        "title": "Claude",
+        "url": "index.html",
+        "width": 296,
+        "height": 306,
+        "decorations": false,
+        "transparent": true,
+        "shadow": false,
+        "resizable": false,
+        "skipTaskbar": true,
+        "alwaysOnBottom": true,
+        "visible": false,
+        "focus": false
+      },
+      {
+        "label": "disks",
+        "title": "Ổ đĩa",
+        "url": "index.html",
+        "width": 276,
+        "height": 180,
+        "decorations": false,
+        "transparent": true,
+        "shadow": false,
+        "resizable": false,
+        "skipTaskbar": true,
+        "alwaysOnBottom": true,
+        "visible": false,
+        "focus": false
+      },
+      {
+        "label": "power",
+        "title": "Nguồn",
+        "url": "index.html",
+        "width": 276,
+        "height": 106,
+        "decorations": false,
+        "transparent": true,
+        "shadow": false,
+        "resizable": false,
+        "skipTaskbar": true,
+        "alwaysOnBottom": true,
+        "visible": false,
+        "focus": false
+      },
+      {
+        "label": "launcher",
+        "title": "Mở nhanh",
+        "url": "index.html",
+        "width": 276,
+        "height": 120,
+        "decorations": false,
+        "transparent": true,
+        "shadow": false,
+        "resizable": false,
+        "skipTaskbar": true,
+        "alwaysOnBottom": true,
+        "visible": false,
+        "focus": false
+      },
+      {
+        "label": "settings",
+        "title": "WinWidgets - Cài đặt",
+        "url": "index.html",
+        "width": 500,
+        "height": 680,
+        "minWidth": 440,
+        "minHeight": 520,
+        "decorations": true,
+        "transparent": false,
+        "resizable": true,
+        "skipTaskbar": false,
+        "visible": false,
+        "center": true
+      }
+    ],
+    "security": {
+      "csp": "default-src 'self' ipc: http://ipc.localhost; connect-src 'self' ipc: http://ipc.localhost https://api.open-meteo.com https://geocoding-api.open-meteo.com https://air-quality-api.open-meteo.com https://ipwho.is; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self' data:"
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": ["nsis"],
+    "icon": [
+      "icons/32x32.png",
+      "icons/128x128.png",
+      "icons/128x128@2x.png",
+      "icons/icon.icns",
+      "icons/icon.ico"
+    ],
+    "windows": {
+      "nsis": {
+        "installMode": "currentUser"
+      }
+    }
+  }
+}
